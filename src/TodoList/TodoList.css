@@ -1,0 +1,13 @@
+.todo-list-container{
+  justify-self: center;
+  align-self: start;
+  width: 90%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-template-rows: auto;
+  gap: 50px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}

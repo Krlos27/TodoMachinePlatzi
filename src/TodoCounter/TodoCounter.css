@@ -1,0 +1,6 @@
+.todo-counter-container{
+  display: grid;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
