@@ -15,11 +15,11 @@ function Modal () {
 
   return ReactDOM.createPortal(
     <div className="modal-background">
-      <div className="modal-form-container">
-        <textarea id="modalInputText" type="text" className="modal-input form-control" placeholder="Escribe lo harás..." rows="6" />
+      <form className="modal-form-container" onSubmit={addTodoClick}>
+        <textarea id="modalInputText" type="text" className="modal-input form-control" placeholder="Escribe lo harás..." rows="6" required />
         <button className="btn btn-danger" onClick={() => setOpenModal(false)}>Cancelar</button>
-        <button className="btn btn-success" onClick={() => addTodoClick()}>Añadir</button>
-      </div>
+        <button className="btn btn-success" type="submit">Añadir</button>
+      </form>
     </div>,
     document.getElementById('modal')
   )

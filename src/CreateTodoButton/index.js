@@ -2,11 +2,8 @@ import React from 'react'
 import "./CreateTodoButton.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { TodoContext } from '../TodoContext'
 
-function CreateTodoButton() {
-
-  const { setOpenModal, openModal } = React.useContext(TodoContext);
+function CreateTodoButton({ setOpenModal, openModal }) {
 
   const newTodoClick = () => {
     if (!openModal) {

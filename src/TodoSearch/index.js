@@ -3,11 +3,7 @@ import './TodoSearch.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-import { TodoContext } from '../TodoContext'
-
-function TodoSearch() {
-
-  const { searchValue, searchInputValue } = React.useContext(TodoContext)
+function TodoSearch({ searchValue, searchInputValue }) {
 
   const searchInput = (event) => {
     searchValue(event.target.value)
