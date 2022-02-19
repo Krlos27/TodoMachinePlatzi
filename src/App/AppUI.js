@@ -16,15 +16,15 @@ import { TodoContext } from '../TodoContext'
 
 function AppUI() {
   
-  const {loading, error, searchedTodos, checkTodo, deleteTodo, searchValue, searchInputValue, completedTodos, totalTodoCount, setOpenModal, openModal } = React.useContext(TodoContext)
+  const {loading, error, searchedTodos, checkTodo, deleteTodo, setOpenModal, openModal, addTodo, completedTodos, totalTodoCount, searchValue, searchInputValue} = React.useContext(TodoContext)
 
   return (
     <div id="init-container">
       <Header>
-        <TodoSearch searchValue={searchValue} searchInputValue={searchInputValue}/>
+        <TodoSearch searchInputValue={searchInputValue} searchValue={searchValue}/>
       </Header>
       <Main>
-        <TodoCounter completedTodos={completedTodos} totalTodoCount={totalTodoCount} loading={loading} />
+        <TodoCounter loading={loading} completedTodos={completedTodos} totalTodoCount={totalTodoCount} />
         {loading ? <LoadingScreen /> : (!searchedTodos.length && !loading) ? <EmptyScreen /> :
           <TodoList>
             {error && <p>¡Error!</p>}
@@ -33,8 +33,8 @@ function AppUI() {
             ))}
           </TodoList>
         }
-        <CreateTodoButton openModal={openModal} setOpenModal={setOpenModal} />
-        {openModal && <Modal />}
+        <CreateTodoButton  setOpenModal={setOpenModal} openModal={openModal} />
+        {openModal && <Modal setOpenModal={setOpenModal} addTodo={addTodo} />}
       </Main>
       <Footer />
     </div>
