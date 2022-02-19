@@ -12,7 +12,7 @@ function TodoSearch({ searchValue, searchInputValue }) {
   return (
     <>
       <div className="todo-search-container">
-        <input type="text" placeholder="Buscar..." name="search" className="todo-search-input form-control" onChange={searchInput} value={searchInputValue}/>
+        <input type="text" placeholder="Buscar..." name="search" className="todo-search-input form-control" onChange={searchInput} value={searchInputValue} />
         <button type="button" className="btn btn-search"><FontAwesomeIcon icon={faSearch} /></button>
       </div>
     </>

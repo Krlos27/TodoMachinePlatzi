@@ -6,6 +6,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 function CreateTodoButton({ setOpenModal, openModal }) {
 
   const newTodoClick = () => {
+    console.log(openModal)
     if (!openModal) {
       setOpenModal(true)
     }else{

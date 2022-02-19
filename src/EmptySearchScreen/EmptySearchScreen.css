@@ -1,15 +1,15 @@
-.empty-screen-container{
+.empty-search-screen-container{
   display: grid;
   width: 100%;
   height: 100%;
   align-items: center;
   justify-items: center;
 }
-.empty-screen-container>img{
+.empty-search-screen-container>img{
   width: 40vh;
 }
 
-.empty-screen-container>h2{
+.empty-search-screen-container>h2{
   width: 40vh;
   color: #8a96a3;
   align-self: start;
