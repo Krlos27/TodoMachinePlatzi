@@ -11,8 +11,9 @@ function Main(props) {
         {props.error && props.onError()}
         {(!props.searchedTodosCount && !props.totalTodoCount && !props.loading) && props.onEmptyTodos()}
         {(props.totalTodoCount && !props.searchedTodosCount) ? props.onEmptySearch() : ""}
-        {props.children[1]}
+        {(!props.error && !props.loading)? props.children[1] : ""}
         {props.children[2]}
+        {props.children[3]}
       </main>
     </>
   );

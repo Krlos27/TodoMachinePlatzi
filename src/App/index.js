@@ -10,12 +10,13 @@ import { TodoSearch } from '../TodoSearch'
 import { LoadingScreen } from '../LoadingScreen'
 import { EmptyScreen } from '../EmptyScreen'
 import { EmptySearchScreen } from '../EmptySearchScreen'
+import { ChangeStorageAlert } from '../ChangeStorageAlert';
 import { Modal } from '../Modal'
 import { useTodos } from './useTodos'
 
 function App() {
 
-  const {loading, error, searchedTodos, checkTodo, deleteTodo, setOpenModal, openModal, addTodo, completedTodos, totalTodoCount, searchValue, searchInputValue} = useTodos()
+  const {loading, error, searchedTodos, checkTodo, deleteTodo, setOpenModal, openModal, addTodo, completedTodos, totalTodoCount, searchValue, searchInputValue, syncTodos} = useTodos()
 
   return (
     <div id="init-container">
@@ -56,6 +57,9 @@ function App() {
         <CreateTodoButton
         setOpenModal={setOpenModal}
         openModal={openModal}
+        />
+        <ChangeStorageAlert
+          syncTodos={syncTodos}
         />
       </Main>
       {openModal && <Modal setOpenModal={setOpenModal} addTodo={addTodo} />}

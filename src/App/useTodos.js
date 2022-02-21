@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocalStorage } from './useLocalStorage'
 
 function useTodos() {
-  const [todos, setTodos, loading, error] = useLocalStorage('savedTodos', [])
+  const {item: todos, saveItem: setTodos, loading, error, syncItem: syncTodos, sincronizedItem: sincronizedTodos} = useLocalStorage('savedTodos', [])
   const [searchInputValue, searchValue] = React.useState("")
   const [openModal, setOpenModal] = React.useState(false)
 
@@ -71,7 +71,8 @@ function useTodos() {
       deleteTodo,
       openModal,
       addTodo,
-      setOpenModal
+      setOpenModal,
+      syncTodos
     }
   )
 }
