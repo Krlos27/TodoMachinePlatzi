@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/TodoMachinePlatzi/static/css/main.9ce7bd96.css",
-    "main.js": "/TodoMachinePlatzi/static/js/main.ae159e4b.js",
+    "main.css": "/TodoMachinePlatzi/static/css/main.ed682dbe.css",
+    "main.js": "/TodoMachinePlatzi/static/js/main.b887bc23.js",
     "index.html": "/TodoMachinePlatzi/index.html",
-    "main.9ce7bd96.css.map": "/TodoMachinePlatzi/static/css/main.9ce7bd96.css.map",
-    "main.ae159e4b.js.map": "/TodoMachinePlatzi/static/js/main.ae159e4b.js.map"
+    "main.ed682dbe.css.map": "/TodoMachinePlatzi/static/css/main.ed682dbe.css.map",
+    "main.b887bc23.js.map": "/TodoMachinePlatzi/static/js/main.b887bc23.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ce7bd96.css",
-    "static/js/main.ae159e4b.js"
+    "static/css/main.ed682dbe.css",
+    "static/js/main.b887bc23.js"
   ]
 }
